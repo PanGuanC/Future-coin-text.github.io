@@ -1,62 +1,67 @@
 body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    font-family: Arial, sans-serif;
+    overflow: hidden; /* 隱藏頁面的滾動條 */
 }
 
 .cover {
+    width: 100vw;
+    height: 100vh;
     position: relative;
-    width: 100%;
-    height: 50vh;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto; /* 允許滾動 */
 }
 
 .cover img {
-    width: 100%;
-    height: auto;
+    width: 120%; /* 超出網頁寬度 20% */
+    height: auto; /* 根據寬度自動調整高度 */
     object-fit: cover;
 }
 
 .top-left-text {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    background-color: rgba(210, 210, 114, 0.8);
-    padding: 10px;
+    top: 20px; /* 距離上方 20 像素 */
+    left: 20px; /* 距離左邊 20 像素 */
+    background-color: rgba(210, 210, 114, 0.108); /* 白色背景，透明度為 0.8 */
+    padding: 10px; /* 內邊距 */
+    font-family: Arial, sans-serif; /* 字體設置為 Arial 或 sans-serif */
 }
 
 .welcome-text {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 40px; /* 歡迎文字的字體大小為 24 像素 */
+    font-weight: bold; /* 歡迎文字加粗 */
 }
 
 .join-text {
-    font-size: 18px;
+    font-size: 32px; /* 期待你的加入文字的字體大小為 18 像素 */
 }
 
+/* 新增的按鈕樣式 */
 .bottom-left-button {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    z-index: 1000;
+    position: absolute;
+    bottom: 200px; /* 距離底部 20 像素 */
+    left: 20px; /* 距離左邊 20 像素 */
+    z-index: 1000; /* 按鈕放在最上層 */
 }
 
 .bottom-left-button a {
-    display: block;
-    margin-bottom: 10px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    display: inline-block;
+    margin-right: 15px;
+    padding: 10px 15px;
+    background-color: #007bff; /* 按鈕背景色 */
+    color: white; /* 文字顏色 */
+    text-decoration: none; /* 去除下劃線 */
+    border-radius: 5px; /* 圓角 */
+    transition: background-color 0.3s; /* 過渡效果 */
 }
 
 .bottom-left-button a:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* 滑鼠懸停時的背景色 */
 }
 
+/* 白皮書內容隱藏 */
 .whitepaper-content,
 .disclaimer-content,
 .become-member-content {
@@ -69,12 +74,14 @@ body {
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
-    max-width: 90vw;
-    max-height: 90vh;
+    max-height: 80vh;
     overflow-y: auto;
 }
 
-.close-btn {
+/* 叉叉按鈕樣式 */
+.close-btn,
+#disclaimer-close-btn,
+#become-member-close-btn {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -82,16 +89,34 @@ body {
     cursor: pointer;
 }
 
+.disclaimer-text,
+.become-member-text {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.disclaimer-text h2,
+.become-member-text h2 {
+    font-size: 24px;
+}
+
+.disclaimer-text p,
+.become-member-text p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* 接受免責聲明的選項樣式 */
 .acceptance {
     margin-top: 20px;
 }
 
-.acceptance label {
+label {
     display: block;
     margin-bottom: 10px;
 }
 
-.acceptance input[type="checkbox"] {
+input[type="checkbox"] {
     margin-right: 10px;
 }
 
@@ -111,33 +136,30 @@ body {
     cursor: not-allowed;
 }
 
+/* 公告樣式 */
 .announcement {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    max-width: calc(100vw - 40px);
+    position: absolute;
+    bottom: 20px; /* 距離底部 20 像素 */
+    left: 20px; /* 距離左邊 20 像素 */
+    right: 40px; /* 距離右邊 20 像素 */
+    max-width: calc(100vw - 40px); /* 最大寬度為視窗寬度減去兩側邊距 */
     background-color: #f8f9fa;
     border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 10px;
+    padding: 10px; /* 調整內容間距 */
     text-align: left;
     line-height: 1.6;
-    overflow-y: auto;
-    max-height: 30vh;
+    overflow-y: auto; /* 允許垂直滾動 */
+    max-height: 12vh; /* 最大高度，超出時出現滾動條 */
 }
 
 .announcement h2 {
     margin-top: 0;
-    font-size: 18px;
+    font-size: 18px; /* 調整標題大小 */
 }
 
-#announcement-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+.announcement-content {
+    /* 公告內容的樣式 */
 }
 
-#announcement-list li {
-    margin-bottom: 10px;
-}
+
