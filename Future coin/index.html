@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>封面照片</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="cover">
+        <img src="path_to_your_image.jpg" alt="封面照片">
+        <div class="top-left-text">
+            <p class="welcome-text">Welcome to Future Coin</p>
+            <p class="join-text">Looking forward to your joining!</p>
+        </div>
+    </div>
+    
+    <!-- 新增的按鈕 -->
+    <div class="bottom-left-button">
+        <a href="#" id="whitepaper-btn">Whitepaper</a>
+        <a href="#" id="disclaimer-btn">Disclaimer</a>
+        <a href="#" id="become-member-btn" style="display: none;">Become a Project Member</a>
+    </div>
+
+    <!-- 白皮書內容 -->
+    <div class="whitepaper-content" id="whitepaper-content">
+        <span class="close-btn" id="close-btn">&times;</span>
+        <div class="whitepaper-text">
+            <h2>Fture Coin Whitepaper</h2>
+
+            <h3>Introduction</h3>
+            <p>"Fture Coin" is a new cryptocurrency project designed to create a unique currency ecosystem to meet the needs of future finance and investment. The project aims to create a currency that cannot be mined, but rather created and distributed through people's investments.</p>
+
+            <h3>Background</h3>
+            <p>With the rapid development and increasing complexity of the cryptocurrency market, we have recognized the limitations of many traditional cryptocurrencies, such as the energy consumption of mining and issues of over-centralization. Therefore, we have decided to create a new cryptocurrency aimed at achieving a fairer, more open, and sustainable cryptocurrency system.</p>
+
+            <h3>Purpose of Creation</h3>
+            <p>The purpose of "Fture Coin" is to establish a community-driven currency ecosystem that gives everyone the opportunity to participate and benefit. We aim to provide a reliable and enduring alternative for the future of finance, allowing users to freely transact, invest, and engage.</p>
+
+            <h3>Currency Issuance</h3>
+            <p>"Fture Coin" is issued differently from traditional cryptocurrencies. We will not mine it, but rather distribute it through community investments. This means that anyone can invest an arbitrary initial amount to obtain "Fture Coin," and these investments will be used to support the development and operation of the project.</p>
+
+            <h3>Investment Returns</h3>
+            <p>Once the number of investors and the amount of investment in "Fture Coin" reach our set goals, we will distribute the currency to the initial investors according to a certain ratio. This means that your investment will yield actual returns for you, while also contributing to the development and growth of the "Fture Coin" ecosystem.</p>
+
+            <h3>Conclusion</h3>
+            <p>"Fture Coin" aims to create a fair, open, and sustainable cryptocurrency ecosystem where everyone has the opportunity to participate and benefit. We welcome all those passionate about the future of finance to join our project and collectively create a brighter future for cryptocurrency.</p>
+        </div>
+    </div>
+
+    <!-- 免責聲明內容 -->
+    <div class="disclaimer-content" id="disclaimer-content">
+        <span class="close-btn" id="disclaimer-close-btn">&times;</span>
+        <div class="disclaimer-text">
+            <h2>Disclaimer</h2>
+            <p>The information provided in this document is for informational purposes only and should not be construed as investment advice. Investing in cryptocurrencies, including Future Coin, carries inherent risks. Before making any investment decisions, individuals should conduct their own research, carefully consider their financial situation, and consult with independent financial advisors.</p>
+
+            <p>While the "Future Coin" project team has conducted extensive research and analysis to ensure the feasibility of the project, it is important to acknowledge that all investments carry a level of risk, and there is no guarantee of returns. The decision to participate in the Future Coin project is at the sole discretion of the individual investor, and the project team does not guarantee the success or profitability of any investments made.</p>
+
+            <p>Future Coin's whitepaper and project documentation are intended to provide transparency and insight into the project's goals, technology, and roadmap. However, it is essential to recognize that the cryptocurrency market is highly volatile and subject to rapid changes. The market value of Future Coin and its tokens may fluctuate significantly, and investors should be prepared for potential losses.</p>
+
+            <p>Participants in the Future Coin project should be aware that the project team cannot offer refunds for any funds invested. By choosing to participate in Future Coin, investors acknowledge and accept all risks associated with cryptocurrency investments, including but not limited to market volatility, regulatory changes, and technological risks.</p>
+
+            <p>It is strongly recommended that potential investors thoroughly review the Future Coin whitepaper, project documentation, and seek advice from financial and legal professionals before making any investment decisions. The decision to invest in Future Coin is entirely voluntary and at the individual's own risk.</p>
+
+            <!-- 增加接受免責聲明的選項和確定按鈕 -->
+            <div class="acceptance">
+                <label for="accept-checkbox">
+                    <input type="checkbox" id="accept-checkbox"> I accept all the terms of this disclaimer
+                </label>
+                <button id="accept-btn" disabled>Accept</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 成為計畫人員內容 -->
+    <div class="become-member-content" id="become-member-content">
+        <span class="close-btn" id="become-member-close-btn">&times;</span>
+        <div class="become-member-text">
+            <h2>Become a Project Member</h2>
+            <p>This project is currently accepting contributions via PayPal. If you wish to become a member of this project, please make a payment to the following PayPal account:</p>
+            <p>PayPal Account: <a href="mailto:erstyuios@gmail.com">erstyuios@gmail.com</a></p>
+            <p>Please include your email address in the payment note so we can contact you.</p>
+            <p><strong>Note:</strong> If the payment amount is less than $1, your account will be considered invalid and you will not receive any tokens when they are distributed.</p>
+        </div>
+    </div>
+
+    <!-- 公告欄 -->
+    <div class="announcement">
+        <h2>Announcement</h2>
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Content</th>
+            </tr>
+            <tr>
+                <td>2024/04/22</td>
+                <td>Future Coin's website is officially launched!</td>
+            </tr>
+            <tr>
+                <td>2024/04/25</td>
+                <td>Open for project members! You can now become a project member and contribute to our project.</td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
